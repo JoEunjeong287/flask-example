@@ -3,7 +3,7 @@ node {
          checkout scm
      }
      stage('Build image') {
-         app = docker.build("eunjeongjo/d208backend")
+         app = docker.build("eunjeongjo/flask-example")
      }
      stage('Push image') {
          docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') {
